@@ -29,9 +29,9 @@ class Home extends Component {
   }
 
   handleAddProduct = product => {
-    const { addToCart } = this.props;
+    const { addToCartRequest } = this.props;
 
-    addToCart(product);
+    addToCartRequest(product.id);
   };
 
   render() {
@@ -77,6 +77,6 @@ const mapDispatchToProps = dispatch =>
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 Home.propTypes = {
-  addToCart: PropTypes.func.isRequired,
-  amount: PropTypes.number.isRequired,
+  addToCartRequest: PropTypes.func.isRequired,
+  amount: PropTypes.object.isRequired,
 };

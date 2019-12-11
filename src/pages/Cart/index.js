@@ -101,10 +101,8 @@ const mapDispatchToProps = dispatch =>
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
 
 Cart.propTypes = {
-  cart: PropTypes.shape({
-    map: PropTypes.func,
-  }).isRequired,
-  total: PropTypes.number.isRequired,
+  cart: PropTypes.array.isRequired,
+  total: PropTypes.string.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateAmount: PropTypes.func.isRequired,
 };

@@ -1,10 +1,10 @@
 import produce from 'immer';
 
-export default function cart(state, action) {
+export default function cart(state = [], action) {
   // 'state', current state
   // 'action' what is being sent
   switch (action.type) {
-    case '@cart/ADD':
+    case '@cart/ADD_SUCCESS':
       return produce(state, draft => {
         const productIndex = draft.findIndex(p => p.id === action.product.id);
         if (productIndex >= 0) {
@@ -34,6 +34,6 @@ export default function cart(state, action) {
       });
     }
     default:
-      return [];
+      return state;
   }
 }
