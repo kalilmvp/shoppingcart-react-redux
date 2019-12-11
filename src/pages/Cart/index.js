@@ -104,4 +104,7 @@ Cart.propTypes = {
   cart: PropTypes.shape({
     map: PropTypes.func,
   }).isRequired,
+  total: PropTypes.number.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
+  updateAmount: PropTypes.func.isRequired,
 };

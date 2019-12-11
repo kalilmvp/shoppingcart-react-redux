@@ -78,4 +78,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 Home.propTypes = {
   addToCart: PropTypes.func.isRequired,
+  amount: PropTypes.number.isRequired,
 };
